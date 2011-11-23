@@ -24,3 +24,6 @@
 /src/UnitTests/obj/Debug/UnitTests.dll
 /src/UnitTests/obj/Debug/UnitTests.pdb
 /src/chrisglass.me.5.0.ReSharper.user
+/src/_ReSharper.cqrs
+/src/CQRS/bin
+/src/CQRS/obj
