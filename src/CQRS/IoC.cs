@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using CQRS.Configuration;
 
 namespace CQRS
 {
     public class IoC
     {
-        public static IContainer Container { get; set; }
+        private readonly IContainer container;
+        private static IoC instance;
 
+        private IoC(IContainer container)
+        {
+            this.container = container;
+        }
 
+        public static IContainer Container { get { return instance.container; } }
+
+        public static void Set(IContainer container)
+        {
+            instance = new IoC(container);
+        }
     }
 }

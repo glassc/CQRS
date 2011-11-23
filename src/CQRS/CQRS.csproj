@@ -47,12 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\IContainer.cs" />
-    <Compile Include="Configuration\NInject\ConfigureNInject.cs" />
+    <Compile Include="Configuration\NInject\NInject.cs" />
     <Compile Include="Configuration\NInject\NInjectContainer.cs" />
-    <Compile Include="Configure.cs" />
+    <Compile Include="CQRS.cs" />
     <Compile Include="Domain\AggregateRoot.cs" />
     <Compile Include="Domain\Do.cs" />
     <Compile Include="Eventing\Event.cs" />
+    <Compile Include="Eventing\IEventHandler.cs" />
     <Compile Include="Eventing\Storage\MemoryEventStore.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="IoC.cs" />

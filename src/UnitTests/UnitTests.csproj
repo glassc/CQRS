@@ -60,7 +60,7 @@
     <Compile Include="Eventing\TestEvent.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework\CQRS.csproj">
+    <ProjectReference Include="..\CQRS\CQRS.csproj">
       <Project>{1FB0B038-8471-49AE-8057-1B93A93CE56C}</Project>
       <Name>CQRS</Name>
     </ProjectReference>
