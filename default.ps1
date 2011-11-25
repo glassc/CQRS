@@ -27,6 +27,7 @@ task Test -depends Compile {
 	exec { &"$package_dir\NUnit.2.5.10.11092\tools\nunit-console.exe" "$build_dir\UnitTests.dll" }
 }
 
-task Package -depends Compile {
+task Package -depends CompileRelease {
 
 }
+
