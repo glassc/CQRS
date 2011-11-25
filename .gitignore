@@ -27,3 +27,10 @@
 /src/_ReSharper.cqrs
 /src/CQRS/bin
 /src/CQRS/obj
+/build
+/src/CQRS/obj
+/src/CQRS/bin
+/src/_ReSharper.cqrs
+/src/UnitTests/bin
+/src/UnitTests/obj
+/build
