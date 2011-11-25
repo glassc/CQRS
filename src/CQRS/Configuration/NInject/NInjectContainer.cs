@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,11 @@ namespace CQRS.Configuration.NInject
         public IEnumerable<T> ResolveAll<T>()
         {
             return kernel.GetAll<T>();
+        }
+
+        public IEnumerable ResolveAll(Type type)
+        {
+            return kernel.GetAll(type);
         }
     }
 }

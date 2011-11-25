@@ -9,3 +9,5 @@ C:\Users\chris\Development\cqrs\src\CQRS\bin\Debug\Ninject.xml
 C:\Users\chris\Development\cqrs\src\CQRS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chris\Development\cqrs\src\CQRS\obj\Debug\CQRS.dll
 C:\Users\chris\Development\cqrs\src\CQRS\obj\Debug\CQRS.pdb
+C:\Users\chris\Development\cqrs\build\CQRS.dll
+C:\Users\chris\Development\cqrs\build\CQRS.pdb

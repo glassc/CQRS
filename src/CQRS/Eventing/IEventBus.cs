@@ -4,6 +4,6 @@ namespace CQRS.Eventing
 {
     public interface IEventBus
     {
-        void Publish(IEnumerable<Event> events);
+        void Publish<T>(T @event) where T : Event;
     }
 }

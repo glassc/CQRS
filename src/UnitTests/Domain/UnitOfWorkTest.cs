@@ -24,7 +24,7 @@ namespace UnitTests.Domain
             eventStore = new Mock<IEventStore>();
             eventBus = new Mock<IEventBus>();
             eventQueue = new Queue<Event>();
-            unitOfWork = new UnitOfWork(eventQueue, eventStore.Object);
+            unitOfWork = new UnitOfWork(eventQueue, eventStore.Object, eventBus.Object);
             aggregateRoot = new TestAggregateRoot(Guid.Empty);
         }
 
@@ -48,7 +48,7 @@ namespace UnitTests.Domain
             aggregateRoot.Test(@event);
             unitOfWork.Commit();
             eventStore.Verify(s => s.Save(eventQueue));
-            eventBus.Verify(b => b.Publish(eventQueue));
+            eventBus.Verify(b => b.Publish(@event));
             Assert.AreEqual(0, eventQueue.Count);
 
         }

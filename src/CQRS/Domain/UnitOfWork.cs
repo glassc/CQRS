@@ -10,17 +10,18 @@ namespace CQRS.Domain
         private readonly Queue<Event> eventQueue;
         private readonly IEventStore eventStore;
 
-        public UnitOfWork(Queue<Event> eventQueue, IEventStore eventStore)
+        public UnitOfWork(Queue<Event> eventQueue, IEventStore eventStore, IEventBus eventBus)
         {
             this.eventQueue = eventQueue;
-          
+            this.eventBus = eventBus;
+
             this.eventStore = eventStore;
         }
 
-        public UnitOfWork(IEventStore eventStore) : this(new Queue<Event>(), eventStore)
+        public UnitOfWork(IEventStore eventStore, IEventBus eventBus) : this(new Queue<Event>(), eventStore, eventBus)
         {
             this.eventStore = eventStore;
-          
+            this.eventBus = eventBus;
         }
 
         public void Track(AggregateRoot aggregateRoot)
@@ -31,7 +32,8 @@ namespace CQRS.Domain
         public void Commit()
         {
             eventStore.Save(eventQueue);
-          
+            foreach (var @event in eventQueue)
+                eventBus.Publish(@event);
             eventQueue.Clear();
         }
 
