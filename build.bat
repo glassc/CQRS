@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy RemoteSigned .\psake.ps1 default.ps1 %*
