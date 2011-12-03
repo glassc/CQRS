@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CQRS.Eventing;
+using CQRS.Eventing.Bus;
 using CQRS.Eventing.Storage;
 
 namespace CQRS.Domain

@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 
 namespace CQRS.Eventing.Serialization
 {
-    public class JsonObjectSerializer : IEventSerializater
+    public class JsonObjectSerializer : IObjectSerializer
     {
         private readonly JsonSerializer serializer;
 

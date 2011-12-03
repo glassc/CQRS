@@ -1,7 +1,4 @@
-﻿using System;
-using System.Reflection;
-
-namespace CQRS.Eventing
+﻿namespace CQRS.Eventing.Bus
 {
     public class SynchronizedEventBus : IEventBus
     {

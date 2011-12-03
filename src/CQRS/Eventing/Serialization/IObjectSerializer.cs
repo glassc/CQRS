@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CQRS.Eventing.Serialization
 {
-    interface IEventSerializater
+    public interface IObjectSerializer
     {
         string Serialize(object objectToSerialize);
         object Deserialize(string raw);

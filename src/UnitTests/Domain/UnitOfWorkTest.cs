@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CQRS.Domain;
 using CQRS.Eventing;
+using CQRS.Eventing.Bus;
 using CQRS.Eventing.Storage;
 using Moq;
 using NUnit.Framework;

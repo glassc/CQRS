@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace CQRS.Eventing
+namespace CQRS.Eventing.Bus
 {
     public interface IEventBus
     {

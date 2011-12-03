@@ -11,11 +11,20 @@ namespace CQRS.Eventing.Storage
     {
         private readonly IObjectSerializer serializer;
 
+        public SimpleFileStore(IObjectSerializer serializer)
+        {
+            this.serializer = serializer;
+        }
+
         public void Save(IEnumerable<Event> events)
         {
-            using( var file = new FileStream(@"c:\event.store", FileMode.Append))
+            using( var file = new StreamWriter(new FileStream(@"c:\event.store", FileMode.Append)))
             {
-                file.
+                foreach (var @event in events)
+                
+                    file.WriteLine(serializer.Serialize(@event));
+                
+                
             }
         
        
@@ -23,7 +32,17 @@ namespace CQRS.Eventing.Storage
 
         public IEnumerable<Event> GetEventsFor(Guid aggregateRootId)
         {
-            throw new NotImplementedException();
+            var result = new List<Event>();
+            using (var file = new StreamReader(new FileStream(@"c:\event.store", FileMode.Append)))
+            {
+               while(!file.EndOfStream)
+               {
+                   result.Add((Event)serializer.Deserialize(file.ReadLine()));
+               }
+
+
+            }
+            return result;
         }
     }
 }
