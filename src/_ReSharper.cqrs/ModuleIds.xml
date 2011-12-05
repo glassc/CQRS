@@ -1,4 +1,5 @@
 <Modules>
   <Module PersistentId="1FB0B038-8471-49AE-8057-1B93A93CE56C" ModuleId="CQRS" />
   <Module PersistentId="E0662F52-7743-40EE-B7A9-63E7C1DF8D75" ModuleId="UnitTests" />
+  <Module PersistentId="DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B" ModuleId="TestConsole" />
 </Modules>

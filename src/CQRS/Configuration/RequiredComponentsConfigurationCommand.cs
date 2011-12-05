@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CQRS.Domain;
+using CQRS.Eventing.Serialization;
 
 namespace CQRS.Configuration
 {
@@ -13,6 +14,7 @@ namespace CQRS.Configuration
         {
             container.Register<IUnitOfWork, UnitOfWork>();
             container.Register<IDomainRepository, DomainRepository>();
+            container.Register<IObjectSerializer, JsonObjectSerializer>();
         }
     }
 }
