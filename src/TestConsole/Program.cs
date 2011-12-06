@@ -13,7 +13,7 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            Do.Configure().WithNInjectContainer().WithSynchronizedEventBus().WithMemoryEventStore().Start();
+            Configure.CQRS().WithNInjectContainer().UsingSynchronizedEventBus().UsingMemoryEventStore().Start();
 
         }
     }

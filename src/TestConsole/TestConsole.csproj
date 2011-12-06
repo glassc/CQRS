@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ec62e7c2-1aad-4678-90c8-033df0fd5a13</ProjectGuid>
+    <ProjectGuid>{DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestConsole</RootNamespace>
@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS\CQRS.csproj">
+      <Project>{1FB0B038-8471-49AE-8057-1B93A93CE56C}</Project>
+      <Name>CQRS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,16 +8,16 @@ namespace CQRS.Configuration.NInject
 {
     public static class NInjectContainerConfigurationExtension
     {
-        public static CQRS WithNInjectContainer(this CQRS cqrs)
+        public static Configure WithNInjectContainer(this Configure configure)
         {
-            cqrs.Container(new NInjectContainer());
-            return cqrs;
+            configure.Container(new NInjectContainer());
+            return configure;
         }
 
-        public static CQRS  WithNInjectContainer(this CQRS cqrs, IKernel kernel)
+        public static Configure  WithNInjectContainer(this Configure configure, IKernel kernel)
         {
-            cqrs.Container(new NInjectContainer(kernel));
-            return cqrs;
+            configure.Container(new NInjectContainer(kernel));
+            return configure;
         }
     }
 }

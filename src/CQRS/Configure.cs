@@ -14,25 +14,37 @@ namespace CQRS
 {
     
 
-    public class CQRS
+    public class Configure
     {
         private IContainer container;
         private readonly ICollection<IConfigureCommand> configurePipeline;
         
-        public static CQRS Configure()
+        public static Configure CQRS()
         {
-            return new CQRS();
+            return new Configure();
         }
 
-        public CQRS()
+        public Configure()
         {
             configurePipeline = new List<IConfigureCommand>();
         }
 
 
-        public CQRS Container(IContainer container)
+        public Configure Container(IContainer container)
         {
             this.container = container;
+            return this;
+        }
+
+        public Configure UsingSynchronizedEventBus()
+        {
+            AddCommand(new ConfigureSynchronizedEventBusCommand());
+            return this;
+        }
+
+        public Configure UsingMemoryEventStore()
+        {
+            AddCommand(new ConfigureMemoryEventStoreCommand());
             return this;
         }
 

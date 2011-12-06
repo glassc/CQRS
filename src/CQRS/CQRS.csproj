@@ -51,9 +51,12 @@
     <Compile Include="Configuration\NInject\NInject.cs" />
     <Compile Include="Configuration\NInject\NInjectContainer.cs" />
     <Compile Include="Configuration\NInject\NInjectContainerConfigurationExtension.cs" />
-    <Compile Include="CQRS.cs" />
+    <Compile Include="Configuration\RequiredComponentsConfigurationCommand.cs" />
+    <Compile Include="Do.cs" />
     <Compile Include="Domain\AggregateRoot.cs" />
     <Compile Include="Domain\Do.cs" />
+    <Compile Include="Eventing\Bus\ConfigureSynchronizedEventBusCommand.cs" />
+    <Compile Include="Eventing\Bus\SynchronizedEventBusConfigurationExtension.cs" />
     <Compile Include="Eventing\Event.cs" />
     <Compile Include="Eventing\IEventHandler.cs" />
     <Compile Include="Eventing\Serialization\IObjectSerializer.cs" />
