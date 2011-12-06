@@ -8,10 +8,35 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/f:CQRS.cs" caret="0" fromTop="0" />
       <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/d:Configuration/d:NInject/f:NInject.cs" caret="0" fromTop="0" />
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/d:Domain/f:UnitOfWork.cs" caret="488" fromTop="14" />
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/f:Configure.cs" caret="803" fromTop="28" />
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/d:Configuration/d:NInject/f:NInjectContainerConfigurationExtension.cs" caret="309" fromTop="10" />
+      <File id="DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B/f:Program.cs" caret="194" fromTop="7" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:ConfigureMongoDBEventStoreCommand.cs" caret="55" fromTop="1" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBConfigurationExtension.cs" caret="87" fromTop="4" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBEventStore.cs" caret="300" fromTop="10" />
+      <File id="E0662F52-7743-40EE-B7A9-63E7C1DF8D75/d:Mongodb/f:MongoDBEventStoreTest.cs" caret="619" fromTop="25" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/f:Configure.cs" caret="894" fromTop="19" />
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/f:Configure.cs" caret="1104" fromTop="25" />
+      <File id="1FB0B038-8471-49AE-8057-1B93A93CE56C/f:Configure.cs" caret="507" fromTop="15" />
+      <File id="DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B/f:Program.cs" caret="403" fromTop="14" />
+      <File id="DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B/f:Program.cs" caret="203" fromTop="7" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBEventStore.cs" caret="178" fromTop="8" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBEventStore.cs" caret="455" fromTop="18" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:ConfigureMongoDBEventStoreCommand.cs" caret="155" fromTop="4" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:ConfigureMongoDBEventStoreCommand.cs" caret="230" fromTop="8" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBConfigurationExtension.cs" caret="244" fromTop="10" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBConfigurationExtension.cs" caret="19" fromTop="1" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:ConfigureMongoDBEventStoreCommand.cs" caret="55" fromTop="1" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBEventStore.cs" caret="122" fromTop="4" />
+      <File id="12EC01C9-648C-40A2-A9C0-86236127B08B/f:MongoDBEventStore.cs" caret="309" fromTop="10" />
+      <File id="E0662F52-7743-40EE-B7A9-63E7C1DF8D75/d:Mongodb/f:MongoDBEventStoreTest.cs" caret="342" fromTop="13" />
+      <File id="E0662F52-7743-40EE-B7A9-63E7C1DF8D75/d:Mongodb/f:MongoDBEventStoreTest.cs" caret="489" fromTop="19" />
+      <File id="E0662F52-7743-40EE-B7A9-63E7C1DF8D75/d:Mongodb/f:MongoDBEventStoreTest.cs" caret="616" fromTop="25" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -23,4 +48,38 @@
     <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="1" />
+      <Item value="Do`0" priority="0" />
+      <Item value="return" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="container" priority="0" />
+      <Item value="MongoDBEventStore`0" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="Configure`0" priority="0" />
+      <Item value="configure" priority="1" />
+      <Item value="new" priority="2" />
+      <Item value="ConfigureMongoDBEventStoreCommand`0" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="Mongodb" priority="0" />
+      <Item value="ts" priority="0" />
+      <Item value="eventStore" priority="1" />
+      <Item value="MongoDBEventStore" priority="0" />
+      <Item value="tc" priority="0" />
+      <Item value="event" priority="0" />
+      <Item value="TestEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CQRS.Configure">
+      <Item value="UsingSynchronizedEventBus`0" priority="0" />
+      <Item value="UsingMemoryEventStore`0" priority="0" />
+      <Item value="AddCommand`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CQRS.Configuration.IContainer">
+      <Item value="Register`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CQRS.Mongodb.MongoDBEventStore">
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

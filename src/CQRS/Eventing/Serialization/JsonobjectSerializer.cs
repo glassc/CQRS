@@ -13,9 +13,9 @@ namespace CQRS.Eventing.Serialization
         {
             this.serializer = new JsonSerializer
                                   {
-                                      TypeNameHandling = TypeNameHandling.Auto;
+                                      TypeNameHandling = TypeNameHandling.Auto
 
-                                  }
+                                  };
             
         }
 

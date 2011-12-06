@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CQRS;
-using CQRS.Configuration.NInject;
-using CQRS.Eventing.Bus;
-using CQRS.Eventing.Storage;
+﻿
 
 namespace TestConsole
 {
@@ -13,8 +6,7 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            Configure.CQRS().WithNInjectContainer().UsingSynchronizedEventBus().UsingMemoryEventStore().Start();
-
+           
         }
     }
 }

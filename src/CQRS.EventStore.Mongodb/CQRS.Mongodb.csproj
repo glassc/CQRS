@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1FB0B038-8471-49AE-8057-1B93A93CE56C}</ProjectGuid>
+    <ProjectGuid>{12EC01C9-648C-40A2-A9C0-86236127B08B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CQRS</RootNamespace>
-    <AssemblyName>CQRS</AssemblyName>
+    <RootNamespace>CQRS.Mongodb</RootNamespace>
+    <AssemblyName>CQRS.Mongodb</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\lib\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\lib\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,37 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\IConfigureCommand.cs" />
-    <Compile Include="Configuration\IContainer.cs" />
-    <Compile Include="Configuration\NInject\NInject.cs" />
-    <Compile Include="Configuration\NInject\NInjectContainer.cs" />
-    <Compile Include="Configuration\NInject\NInjectContainerConfigurationExtension.cs" />
-    <Compile Include="Configuration\RequiredComponentsConfigurationCommand.cs" />
-    <Compile Include="Configure.cs" />
-    <Compile Include="Domain\AggregateRoot.cs" />
-    <Compile Include="Domain\Do.cs" />
-    <Compile Include="Configuration\ConfigureSynchronizedEventBusCommand.cs" />
-    <Compile Include="Eventing\Event.cs" />
-    <Compile Include="Eventing\IEventHandler.cs" />
-    <Compile Include="Eventing\Serialization\IObjectSerializer.cs" />
-    <Compile Include="Eventing\Serialization\JsonobjectSerializer.cs" />
-    <Compile Include="Configuration\ConfigureMemoryEventStoreCommand.cs" />
-    <Compile Include="Eventing\Storage\MemoryEventStore.cs" />
-    <Compile Include="Eventing\Bus\SynchronizedEventBus.cs" />
-    <Compile Include="Guard.cs" />
-    <Compile Include="IoC.cs" />
+    <Compile Include="ConfigureMongoDBEventStoreCommand.cs" />
+    <Compile Include="EventDocument.cs" />
+    <Compile Include="IMongoConnection.cs" />
+    <Compile Include="MapEventClassToDocument.cs" />
+    <Compile Include="MongoConnection.cs" />
+    <Compile Include="MongoDBConfigurationExtension.cs" />
+    <Compile Include="MongoDBEventStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Domain\DomainRepository.cs" />
-    <Compile Include="Domain\IDomainRepository.cs" />
-    <Compile Include="Eventing\Bus\IEventBus.cs" />
-    <Compile Include="Eventing\Storage\IEventStore.cs" />
-    <Compile Include="Domain\IUnitOfWork.cs" />
-    <Compile Include="Domain\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\CQRS\CQRS.csproj">
+      <Project>{1FB0B038-8471-49AE-8057-1B93A93CE56C}</Project>
+      <Name>CQRS</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

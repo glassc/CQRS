@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Mongodb", "CQRS.EventStore.Mongodb\CQRS.Mongodb.csproj", "{12EC01C9-648C-40A2-A9C0-86236127B08B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B}.Release|x86.ActiveCfg = Release|x86
 		{DBB3ED6A-C3C6-4F95-9BB2-C6806671E97B}.Release|x86.Build.0 = Release|x86
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{12EC01C9-648C-40A2-A9C0-86236127B08B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
