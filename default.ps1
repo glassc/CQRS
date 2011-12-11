@@ -21,6 +21,7 @@ task Help {
 	"Compile  - Compile the framework"
 	"Test     - Run the tests"
 	"Package  - Create a NuGet package in the release directory"
+	"Publish  - Publishes all packages in the release directory"
 	
 }
 
@@ -49,6 +50,15 @@ task Package -depends Compile, CreatePackageStructure, CopyPackageFiles {
 		new-item $release_dir -itemType directory
 	}
 	&"$tools_dir\NuGet.exe" pack "$build_dir\package\CQRS.nuspec" -OutputDirectory "$release_dir"	
+}
+
+task Publish -depends Package {
+	
+	Foreach ($file in Get-Childitem $release_dir)
+	{
+		
+		nuget push "$release_dir\$file" -source http://www.myget.org/F/chrisglass/	
+	}
 }
 
 task CreatePackageStructure {
