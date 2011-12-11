@@ -36,9 +36,6 @@ namespace CQRS.Mongodb
             return collection.Find(query);
         }
 
-        public T Get<T>(IMongoQuery query)
-        {
-            
-        }
+       
     }
 }

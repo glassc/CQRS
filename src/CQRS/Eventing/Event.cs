@@ -6,7 +6,7 @@ namespace CQRS.Eventing
     {
         public readonly Guid EventId;
         public readonly DateTime CreatedTimeStamp;
-        public int Sequence { get; private set; }
+        public int Sequence { get;  set; }
         public Guid AggregateRootId { get; private set; }
 
         protected Event(Guid aggregateRootId)

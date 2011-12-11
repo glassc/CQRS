@@ -49,7 +49,7 @@ namespace UnitTests.Domain
             aggregateRoot.Test(@event);
             unitOfWork.Commit();
             eventStore.Verify(s => s.Save(eventQueue));
-            eventBus.Verify(b => b.Publish(@event));
+            eventBus.Verify(b => b.Publish<Event>(@event));
             Assert.AreEqual(0, eventQueue.Count);
 
         }

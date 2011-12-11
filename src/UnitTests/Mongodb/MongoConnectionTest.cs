@@ -13,35 +13,47 @@ namespace UnitTests.Mongodb
     {
         private const string Database = "test_eventstore";
         private const string CollectionName = "EventDocument";
-        private readonly string ConnectionString = string.Format("mongodb://localhost/{0}", Database);
+        private readonly string ConnectionString = string.Format("mongodb://localhost/{0}?safe=true", Database);
 
         private MongoConnection connection;
+
+        private MongoServer server;
         
 
         [SetUp]
         public void Setup()
         {
             connection = new MongoConnection(ConnectionString);
-            MapEventClassToDocument.Map();
+    
+            server = MongoServer.Create(ConnectionString);
             
         }
 
         [TearDown]
         public void TearDown()
         {
-            var server = MongoServer.Create(ConnectionString);
-            server.DropDatabase(Database);  
+            server.DropDatabase(Database);     
+        }
+
+       
+
+        [TestFixtureSetUp]
+        public void FixtureSetUp()
+        {
+            MapEventClassToDocument.Map();
         }
 
         [Test]
         public void ShouldInsertDocument()
         {
+            
             var document = new EventDocument {EventId = Guid.NewGuid().ToString(), Event = "event", Sequence = 1, AggregateRootId = Guid.NewGuid().ToString()};
             connection.Insert(document);
             var collection = GetCollection<EventDocument>(CollectionName).FindAll();
             Assert.AreEqual(1, collection.Count());
             AssertDocumentsAreEqual(document, collection.First());
-            
+          
+          
         }
 
         [Test]
@@ -55,6 +67,7 @@ namespace UnitTests.Mongodb
             Assert.IsNotNull(actual);
             Assert.AreEqual(1, actual.Count());
             AssertDocumentsAreEqual(expected, actual.First());
+              
         }
 
         private static void AssertDocumentsAreEqual(EventDocument expected, EventDocument actual)
@@ -68,7 +81,6 @@ namespace UnitTests.Mongodb
 
         private MongoCollection<T> GetCollection<T>(string name)
         {
-            var server = MongoServer.Create(ConnectionString);
             var db = server.GetDatabase(Database);
             return db.GetCollection<T>(name);
         }

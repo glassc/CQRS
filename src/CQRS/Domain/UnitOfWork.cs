@@ -21,8 +21,6 @@ namespace CQRS.Domain
 
         public UnitOfWork(IEventStore eventStore, IEventBus eventBus) : this(new Queue<Event>(), eventStore, eventBus)
         {
-            this.eventStore = eventStore;
-            this.eventBus = eventBus;
         }
 
         public void Track(AggregateRoot aggregateRoot)
@@ -34,8 +32,8 @@ namespace CQRS.Domain
         {
             eventStore.Save(eventQueue);
             foreach (var @event in eventQueue)
-                eventBus.Publish(@event);
-            eventQueue.Clear();
+                eventBus.Publish(eventQueue.Peek());
+           eventQueue.Clear();
         }
 
     }
