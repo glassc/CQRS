@@ -42,3 +42,4 @@
 /src/CQRS.EventStore.Mongodb/obj
 /src/TestConsole/obj
 /src/TestConsole/bin
+/TestResult.xml
