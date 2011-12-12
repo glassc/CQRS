@@ -48,9 +48,6 @@
   <ItemGroup>
     <Compile Include="Configuration\IConfigureCommand.cs" />
     <Compile Include="Configuration\IContainer.cs" />
-    <Compile Include="Configuration\NInject\NInject.cs" />
-    <Compile Include="Configuration\NInject\NInjectContainer.cs" />
-    <Compile Include="Configuration\NInject\NInjectContainerConfigurationExtension.cs" />
     <Compile Include="Configuration\RequiredComponentsConfigurationCommand.cs" />
     <Compile Include="Configure.cs" />
     <Compile Include="Domain\AggregateRoot.cs" />
@@ -74,7 +71,9 @@
     <Compile Include="Domain\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

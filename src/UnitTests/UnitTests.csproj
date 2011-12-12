@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\NInject\NInjectContainerTest.cs" />
+    <Compile Include="NInject\NInjectContainerTest.cs" />
     <Compile Include="Domain\AggregateRootTest.cs" />
     <Compile Include="Domain\DomainRepositoryTest.cs" />
     <Compile Include="Domain\UnitOfWorkTest.cs" />
@@ -73,6 +73,10 @@
     <Compile Include="Eventing\TestEvent.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CQRS.Container.NInject\CQRS.Container.NInject.csproj">
+      <Project>{4569E05E-FE48-4F14-AD98-711A3254E701}</Project>
+      <Name>CQRS.Container.NInject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CQRS.EventStore.Mongodb\CQRS.Mongodb.csproj">
       <Project>{12EC01C9-648C-40A2-A9C0-86236127B08B}</Project>
       <Name>CQRS.Mongodb</Name>

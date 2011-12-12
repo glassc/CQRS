@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CQRS.EventStore.Mongodb</id>
+    <version>1.0</version>
+    <authors>Chris</authors>
+    <owners>Chris</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A MongoDB event store for CQRS</description>
+    <copyright>Copyright 2011</copyright>
+    <tags>CQRS</tags>
+    <dependencies>
+      <dependency id="CQRS" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

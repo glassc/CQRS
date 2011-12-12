@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Ninject;
+﻿using Ninject;
 
-namespace CQRS.Configuration.NInject
+namespace CQRS.Container.NInject
 {
     public static class NInjectContainerConfigurationExtension
     {

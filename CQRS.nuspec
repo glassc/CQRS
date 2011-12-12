@@ -9,6 +9,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A CQRS framework</description>
     <copyright>Copyright 2011</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>CQRS</tags>
       </metadata>
 </package>

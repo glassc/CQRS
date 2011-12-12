@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using CQRS.Configuration;
 using Ninject;
 
-namespace CQRS.Configuration.NInject
+namespace CQRS.Container.NInject
 {
     public class NInjectContainer : IContainer
     {

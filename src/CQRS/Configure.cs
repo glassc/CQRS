@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using CQRS.Configuration;
-using CQRS.Configuration.NInject;
-using CQRS.Domain;
-using CQRS.Eventing;
 using CQRS.Eventing.Bus;
 using CQRS.Eventing.Storage;
 
