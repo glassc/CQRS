@@ -65,6 +65,8 @@ namespace CQRS
         public void AddCommand(IConfigureCommand command)
         {
             configurePipeline.Add(command);
+
+            
         
         }
 
