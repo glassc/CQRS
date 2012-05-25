@@ -67,6 +67,8 @@
     </Compile>
     <Compile Include="EventPropertiesViewModel.cs" />
     <Compile Include="EventViewModel.cs" />
+    <Compile Include="FakeEventsProvider.cs" />
+    <Compile Include="IEventsProvider.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

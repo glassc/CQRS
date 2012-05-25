@@ -4,13 +4,13 @@ namespace CQRS.Inspector
     {
         public string Name { get; private set; }
         public string Value { get; private set; }
-        public string Type { get; private set; }
+        
 
-        public EventPropertiesViewModel(string name, string value, string type)
+        public EventPropertiesViewModel(string name, string value)
         {
             Name = name;
             Value = value;
-            Type = type;
+            
         }
     }
 }

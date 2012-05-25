@@ -21,13 +21,14 @@ namespace CQRS.Inspector
             }
         }
 
-        public EventListViewModel()
+        public EventListViewModel() : this(new FakeEventsProvider())
         {
-            Events = new ObservableCollection<EventViewModel>
-                         {
-                             new EventViewModel("CustomerCreatedEvent", 1, DateTime.Now, "SomeEvent"),
-                             new EventViewModel("CustomerUpdatedEvent", 2, DateTime.Now, "AnotherEvent")
-                         };
+        }
+
+        public EventListViewModel(IEventsProvider eventsProvider)
+        {
+            Events = new ObservableCollection<EventViewModel>(eventsProvider.Get());
+                     
         }
 
         private void RaisePropertyChanged(string propertyName)

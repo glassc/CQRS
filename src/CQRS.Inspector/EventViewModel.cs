@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace CQRS.Inspector
@@ -10,19 +11,16 @@ namespace CQRS.Inspector
         public DateTime CreatedTimeStamp { get; private set; }
         public string SerializedEvent { get; private set; }
         public ObservableCollection<EventPropertiesViewModel> Properties { get; private set; }
+        public Guid Id { get; private set; }
 
-        public EventViewModel(string type, int sequenceNumber, DateTime createdTimeStamp, string serializedEvent)
+        public EventViewModel(Guid id, string type, int sequenceNumber, DateTime createdTimeStamp, IEnumerable<EventPropertiesViewModel> properties)
         {
+            Id = id;
             Type = type;
             SequenceNumber = sequenceNumber;
             CreatedTimeStamp = createdTimeStamp;
-            SerializedEvent = serializedEvent;
-
-            Properties = new ObservableCollection<EventPropertiesViewModel>
-                             {
-                                 new EventPropertiesViewModel("Name", "Chris", "String"),
-                                 new EventPropertiesViewModel("Age", "29", "Int32")
-                             };
+            Properties = new ObservableCollection<EventPropertiesViewModel>(properties);
+                             
         }
     }
 }
