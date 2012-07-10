@@ -1,4 +1,6 @@
-﻿namespace CQRS.Mongodb
+﻿using CQRS.Mongodb;
+
+namespace CQRS
 {
     public static class MongoDBConfigurationExtension
     {

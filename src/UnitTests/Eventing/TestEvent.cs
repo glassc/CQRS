@@ -1,4 +1,5 @@
 using System;
+using CQRS;
 using CQRS.Eventing;
 
 namespace UnitTests.Eventing
